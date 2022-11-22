@@ -2,6 +2,8 @@ name: Deploy example
 on: [push]
 jobs:
   deploy:
+    if: ${{github.ref == 'refs/heads/maste' }}
+
     runs-on: ubuntu-latest    
     steps:
       - uses: actions/checkout@v2
